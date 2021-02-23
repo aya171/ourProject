@@ -16,12 +16,11 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'Fname' => 'ahmed',
-            'Lname' => 'essam',
+            'Lname' => 'kamal',
             'email' => 'ahmed@gmail.com',
             'password' => Hash::make('123456789'),
-            'phone'=>'01000550055',
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s"),            
+            'phone'=>'01000550055', 
+            'gender'=>'male'          
 
         ]);
 
@@ -31,8 +30,16 @@ class UserSeeder extends Seeder
             'email' => 'aya@gmail.com',
             'password' => Hash::make('123456789'),
             'phone'=>'012345678990',
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s"),            
+            'gender'=>'female'           
+
+        ]);
+        DB::table('users')->insert([
+            'Fname' => 'mayada',
+            'Lname' => 'essam',
+            'email' => 'mayada@gmail.com',
+            'password' => Hash::make('123456789'),
+            'phone'=>'01000669977',
+            'gender'=>'female'            
 
         ]);
     }
