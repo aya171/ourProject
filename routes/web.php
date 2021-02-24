@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,15 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+/// products
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix'=>'products','namespace'=>'front\products'],function(){
+    Route::get('/all','ProductsController@index');
+    // Route::get('/','ProductsController@all');
 
-Auth::routes();
+});
+Route::group(['prefix'=>'cities','namespace'=>'front\cities'],function(){
+    Route::get('/all','CitiesController@index');
+    // Route::get('/','ProductsController@all');
 
-Route::get('/home', 'HomeController@index')->name('home');
+});

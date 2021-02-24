@@ -14,13 +14,13 @@ class AddressSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('addresses')->insert([
-            'street' => 'Nasr city',
-            'type'=>'home',
-            'building_no'=>'19',
-            'floor_num'=>'5',
-            'Region_id'=>'1',
-            'user_id'=>'1',
-        ]);
+        // DB::table('addresses')->insert([
+        //     'street' => 'Nasr city',
+        //     'type'=>'home',
+        //     'bulding_on'=>19,
+        //     'floor_num'=>5,
+        //     'Region_id'=>1,
+        //     'user_id'=>1,
+        // ]);
     }
 }
