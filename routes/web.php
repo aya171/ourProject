@@ -31,3 +31,7 @@ Route::group(['prefix'=>'cities','namespace'=>'front\cities'],function(){
     // Route::get('/','ProductsController@all');
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
